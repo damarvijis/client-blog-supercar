@@ -1,0 +1,13 @@
+export const SET_BLOGS = "blogs/get";
+export const SET_BLOG_ID = "blog/get";
+export const SET_MYBLOG = "myblogs/get";
+export const SET_ISLOGIN = "setLoggedIn";
+export const SET_REGISTER = "setRegister";
+export const SET_ISLOADING = "setIsLoading";
+export const SET_ISERROR = "setIsError";
+export const SET_CREATE_BLOG = "blog/post";
+export const SET_EDIT_BLOG = "blog/put";
+export const SET_DELETE_BLOG = "blog/delete";
+export const SET_CREATE_COMMENT = "comment/post";
+export const SET_DELETE_COMMENT = "comment/delete";
+export const SET_DATA_USER = "user/set"
