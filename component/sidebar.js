@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import Swal from "sweetalert2"
 
 function sidebar() {
-  const { isLogin } = useSelector((state) => state.UserReducer)
+  const { isLogin, dataUser } = useSelector((state) => state.UserReducer)
+  console.log(dataUser);
   const router = useRouter()
   const [blog, setBlog] = useState('inactive')
   const dispatch = useDispatch()
@@ -39,10 +40,12 @@ function sidebar() {
         }}
       >
         <p style={{ alignSelf: "center", fontSize: "12px", marginTop: "12px", marginBottom: "4px" }}>
-          KINKY OSTENDORF
+          {
+            dataUser.username ? "HAI, " + dataUser.username.toUpperCase() + "!" : "HELLO!"
+          }
         </p>
-        <p style={{ alignSelf: "center", fontSize: "10px" }}>
-          kinkysfruitlab@outlook.com
+        <p style={{ alignSelf: "center", fontSize: "12px" }}>
+          This is our brand new supercars! Enjoy! 
         </p>
       </div>
       <Link href="/">
