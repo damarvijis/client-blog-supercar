@@ -57,15 +57,15 @@ function sidebar() {
           blogActive()
         }}
         style={isLogin ? {display: ""} : {display: "none"}}
-        className={blog == "active" || router.pathname === "/myblog" || router.pathname === "/credits"  ? "btn_sidebar_active" : "btn_sidebar"}>
-          <div className={blog === "active" || router.pathname === "/myblog" || router.pathname === "/credits" ? "images_sidebar_active" : "images_sidebar"}>
+        className={blog == "active" || router.pathname === "/myblog" || router.pathname === "/addBlog"  ? "btn_sidebar_active" : "btn_sidebar"}>
+          <div className={blog === "active" || router.pathname === "/myblog" || router.pathname === "/addBlog" ? "images_sidebar_active" : "images_sidebar"}>
             <div>
             <Image src="/pencil.png" width="27" height="20"/>
             </div>
           </div>
           <div style={{fontSize: "12px"}}>BLOG</div>
         </button>
-        <div className={blog == "active" || router.pathname == "/myblog" || router.pathname == "/myblog" ? "mt-2" : "d-none"}>
+        <div className={blog == "active" || router.pathname == "/myblog" || router.pathname == "/addBlog" ? "mt-2" : "d-none"}>
           <Link href="/myblog">
             <p style={{fontSize: "10px"}} className={router.pathname === "/myblog" ? "p_sidebar actived" : "p_sidebar"}>MY BLOG</p>
           </Link>
@@ -76,21 +76,21 @@ function sidebar() {
       <Link href="/login">
         <button style={isLogin ? {display: "none"} : {display: ""}} className={router.pathname === "/login" ? "btn_sidebar_active" : "btn_sidebar"}>
           <div className={router.pathname === "/login" ? "images_sidebar_active" : "images_sidebar"}>
-            <Image src="/billing.png" width="27" height="20"/>
+            <Image src="/kanan.png" width="27" height="20"/>
           </div>
           <div style={{fontSize: "12px"}}>LOG IN</div>
         </button>
       </Link>
         <button onClick={logout} style={isLogin ? {display: ""} : {display: "none"}} className={router.pathname === "/login" ? "btn_sidebar_active" : "btn_sidebar"}>
           <div className={router.pathname === "/login" ? "images_sidebar_active" : "images_sidebar"}>
-            <Image src="/billing.png" width="27" height="20"/>
+            <Image src="/kiri.png" width="27" height="20"/>
           </div>
           <div style={{fontSize: "12px"}}>LOG OUT</div>
         </button>
       <Link href="/register">
         <button style={isLogin ? {display: "none"} : {display: ""}} className={router.pathname === "/register" ? "btn_sidebar_active" : "btn_sidebar"}>
           <div className={router.pathname === "/register" ? "images_sidebar_active" : "images_sidebar"}>
-            <Image src="/support.png" width="27" height="20"/>
+            <Image src="/collaborators.png" width="27" height="20"/>
           </div>
           <div style={{fontSize: "12px"}}>REGISTER</div>
         </button>
