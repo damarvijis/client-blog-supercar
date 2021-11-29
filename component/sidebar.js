@@ -2,13 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Router, { useRouter } from 'next/router'
 import {useState, useEffect} from 'react'
-import {setIsLogin} from "../store/actions/userAction"
+import {setIsLogin, setDataUser} from "../store/actions/userAction"
 import { useDispatch, useSelector } from 'react-redux'
 import Swal from "sweetalert2"
 
 function sidebar() {
   const { isLogin, dataUser } = useSelector((state) => state.UserReducer)
-  console.log(dataUser);
   const router = useRouter()
   const [blog, setBlog] = useState('inactive')
   const dispatch = useDispatch()
@@ -18,6 +17,7 @@ function sidebar() {
   const logout = () => {
     localStorage.clear()
     dispatch(setIsLogin(false))
+    dispatch(setDataUser({}))
     Swal.fire({
       icon: "success",
       title: "Success",
