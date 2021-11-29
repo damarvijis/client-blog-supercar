@@ -41,10 +41,10 @@ export default function Home() {
       { 
         myBlogs.map((e) => {
           return(
-            <div className="tab-body" key={e.id} style={{cursor: "auto"}}>
-              <div className="col-3"><Image src={e.imgUrl} height="170" width="200" alt="car" /></div>
-              <p className="col-2">{e.title}</p>
-             <div className="col-4"><TextClamp text={e.content} lines={3}/></div>
+            <div className="tab-body" style={{cursor: "default"}} key={e.id}>
+              <div style={{cursor: "pointer"}} onClick={() => {router.push(`/blog/${e.id}`)}} className="col-3"><Image src={e.imgUrl} height="170" width="200" alt="car" /></div>
+              <p style={{cursor: "pointer"}} onClick={() => {router.push(`/blog/${e.id}`)}} className="col-2">{e.title}</p>
+             <div style={{cursor: "pointer"}} onClick={() => {router.push(`/blog/${e.id}`)}} className="col-4"><TextClamp text={e.content} lines={3}/></div>
              <div className="col-3 d-flex flex-row">
               <Button onClick={() => {router.push(`/editBlog/${e.id}`)}} className="d-flex me-2 align-items-center bg-transparent btn shadow-none" style={{ color: "#7DB7B4", border: "2px solid #7DB7B4"}} type="button">
                 <i className="bi bi-pencil-fill me-2" style={{color: "#7DB7B4"}}></i>Edit
