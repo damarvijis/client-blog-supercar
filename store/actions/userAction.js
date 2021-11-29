@@ -5,7 +5,8 @@ import {
   SET_REGISTER,
   SET_DATA_USER
 } from "../actionTypes";
-const server = "http://localhost:3005"
+const server = "https://server-blog-supercar.herokuapp.com"
+// const server = "http://localhost:3005"
 import axios from "axios"
 
 export function setIsLogin(payload) {

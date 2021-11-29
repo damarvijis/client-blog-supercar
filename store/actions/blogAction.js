@@ -5,7 +5,8 @@ import {
   SET_BLOG_ID,
   SET_MYBLOG
 } from "../actionTypes";
-const server = "http://localhost:3005"
+// const server = "http://localhost:3005"
+const server = "https://server-blog-supercar.herokuapp.com"
 import axios from "axios"
 
 export function setDataBlogs(payload) {

@@ -125,7 +125,7 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ query: { page = 1 } }) {
-	const res = await fetch(`http://localhost:3005/blogs?page=${page}`)
+	const res = await fetch(`https://server-blog-supercar.herokuapp.com/blogs?page=${page}`)
 	const dataBlogs = await res.json()
 	return {
 		props: {

@@ -87,7 +87,7 @@ function Home(props) {
 
 Home.getInitialProps = async (ctx) => {
   const { id } = ctx.query
-  const res = await fetch(`http://localhost:3005/blogs/${id}`)
+  const res = await fetch(`https://server-blog-supercar.herokuapp.com/blogs/${id}`)
   const dataBlogById = await res.json()
   	return {
 		props: {
